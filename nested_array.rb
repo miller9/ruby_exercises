@@ -53,3 +53,14 @@ puts "\n The new nested_array: (with 'print')"
 print nested_array
 puts
 
+puts "\nAdding a new element to the start of the matrix with 'unshift':"
+nested_array.unshift("dolphin")
+
+puts "\n The new nested_array:"
+puts nested_array
+puts
+
+puts "\n The new nested_array: (with 'print')"
+print nested_array
+puts
+
