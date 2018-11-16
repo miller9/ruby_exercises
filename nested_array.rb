@@ -30,7 +30,12 @@ puts "\nPrinting the first element: (with 'print')"
 print nested_array[0]
 puts ""
 
+puts "\nAdding a new element to the matrix with 'push':"
+nested_array.push("whale")
 
+puts "\nThe new nested_array:"
+puts nested_array
+puts
 
 
 
