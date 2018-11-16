@@ -64,3 +64,25 @@ puts "\n The new nested_array: (with 'print')"
 print nested_array
 puts
 
+puts "\n-----------"
+puts " DELETING Elements:"
+
+puts "\nprinting the nested_array:"
+print nested_array
+puts ""
+
+nested_array.delete("whale")
+print nested_array
+puts ""
+
+
+
+
+
+
+
+
+
+
+
+
