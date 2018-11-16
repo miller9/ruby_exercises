@@ -33,9 +33,16 @@ puts ""
 puts "\nAdding a new element to the matrix with 'push':"
 nested_array.push("whale")
 
-puts "\nThe new nested_array:"
+puts "\n The new nested_array:"
 puts nested_array
 puts
 
+
+puts "\nAdding a new element to the matrix with '<<' syntax:"
+nested_array << "seahorse"
+
+puts "\n The new nested_array:"
+puts nested_array
+puts
 
 
