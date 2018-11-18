@@ -1,6 +1,5 @@
 puts "\nWheel of fortune"
 starting_sentence = "Hi from matching land"
-puts "Hi from matching land"
 
 sentence_array = starting_sentence.split("").map(&:downcase)
 accurate_count = sentence_array - [" "]
