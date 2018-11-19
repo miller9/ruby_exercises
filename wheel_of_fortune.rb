@@ -21,7 +21,11 @@ accurate_count = sentence_array - [" "]
 
 final_sentence = starting_sentence.gsub(/[a-zA-Z]/, "_").split("")
 
-#In the next step, we are going to convert letters into empty spaces as they are guessed. For example, if the user guesses the letter l , then #that position would be converted into an empty space, without actually removing that letter from the array. To visualize, our array would start #like this:
+#In the next step, we are going to convert letters into empty spaces as they are guessed. 
+#For example, if the user guesses the letter l , 
+#then that position would be converted into an empty space, 
+#without actually removing that letter from the array. To visualize, our array would start 
+#like this:
 
 # [“H”, “i”, “f”, “r”...]
 
@@ -29,7 +33,8 @@ final_sentence = starting_sentence.gsub(/[a-zA-Z]/, "_").split("")
 #, our string would now be:
 # [“H”, “i”, “f”, “”...]
 
-#Also, we are going to add the guessed letter into our final_sentence variable to let the user know how much of the sentence they have guessed.
+#Also, we are going to add the guessed letter into our final_sentence variable to let 
+#the user know how much of the sentence they have guessed.
 #The code for all this functionality is:
 
 while sentence_array.count("") < accurate_count.count
@@ -45,14 +50,27 @@ while sentence_array.count("") < accurate_count.count
   end 
 end
 
-#In this code, we are using a while loop here to check if the empty spaces in the variable sentence_array is less than accurate_count , and we #want the loop to end when all the letters are guessed, which means that it’s nothing besides an array of empty spaces. In other words, when the #sentence_array has only empty spaces, our loop should end.
+#In this code, we are using a while loop here to check if the empty spaces 
+#in the variable sentence_array is less than accurate_count , and we 
+#want the loop to end when all the letters are guessed, 
+#which means that it’s nothing besides an array of empty spaces. 
+#In other words, when the sentence_array has only empty spaces, our loop should end.
 
 
-#Next, we are prompting the user to enter a letter, and we are getting the input and storing it in a variable called guess .
-#Next, we have a conditional, and for this, we are using a method called include . This method is fairly similar to the gsub method, but include #is better when we want to find values in an array. Essentially, this function will check the input parameter with all values in
-#the array, and will proceed to the next line if there is a match. If the letter that is guessed is not in our sentence, then the application #will move to the else block.
+#Next, we are prompting the user to enter a letter, and we are getting the input 
+#and storing it in a variable called guess .
+#Next, we have a conditional, and for this, we are using a method called include . 
+#This method is fairly similar to the gsub method, but include is better 
+#when we want to find values in an array. Essentially, this function will check 
+#the input parameter with all values in the array, and will proceed to the next 
+#line if there is a match. If the letter that is guessed is not in our sentence, 
+#then the application will move to the else block.
 
-#Our code inside of the if block finds the position of the particular letter in the array. We are storing this index value in a variable called #letter_index . For example, if the user guesses the letter i , the find_array method will look through the array, and will return position 1 to #the letter_index variable. Remember, array positions start at 0 , so the second letter would be position 1 .
+#Our code inside of the if block finds the position of the particular letter in the array. 
+#We are storing this index value in a variable called #letter_index . 
+#For example, if the user guesses the letter i , the find_array method will look through the array, 
+#and will return position 1 to the letter_index variable. Remember, array positions start at 0 , 
+#so the second letter would be position 1 .
 #Now that we know the position of the guessed letter in the array, we are going to set it to an empty string in the next line of code.
 #Next, we are setting the value of our input letter to the letter_index position of the final_sentence array. Lastly, we are displaying a #message along with the sentence final_sentence variable to let users know how much of the sentence they have completed. The join method here #converts the array into a sentence.
 
