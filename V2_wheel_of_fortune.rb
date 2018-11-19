@@ -10,7 +10,9 @@ while sentence_array.count("") < accurate_count.count
  guess = gets.downcase.chomp
   if sentence_array.include?(guess)
    # letter_index = sentence_array.scan(guess)
-   letter_index = sentence_array.find_index(guess)
+   # letter_index = sentence_array.find_index(guess)
+   letter_index = sentence_array.gsub /[abcdefghijklmnñopqrstuvwxyz]/, {guess => "_"}
+   # "Sammy has a red balloon".gsub /[aeiou]/, {"a" => "@", "o" => "0"}
    sentence_array[letter_index] = ""
    final_sentence[letter_index] = guess
    puts "Correct! The sentence is now: #{final_sentence.join}"
