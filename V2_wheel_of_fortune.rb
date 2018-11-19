@@ -14,7 +14,7 @@ final_sentence = starting_sentence.gsub(/[a-zA-Z]/, "_").split("")
 # puts "final_sentence is: " + final_sentence.to_s
 
 while sentence_array.count("") < accurate_count.count
- puts "Guess a letter"
+ puts "Guess a letter:"
  guess = gets.downcase.chomp
   if sentence_array.include?(guess)
    # letter_index = sentence_array.scan(guess)
@@ -23,9 +23,17 @@ while sentence_array.count("") < accurate_count.count
    # "Sammy has a red balloon".gsub /[aeiou]/, {"a" => "@", "o" => "0"}
    sentence_array[letter_index] = ""
    final_sentence[letter_index] = guess
-   puts "Correct! The sentence is now: #{final_sentence.join}"
+     if sentence_array.include?(guess)
+   # letter_index = sentence_array.scan(guess)
+     letter_index = sentence_array.find_index(guess)
+   	#letter_index = sentence_array.gsub /[abcdefghijklmnñopqrstuvwxyz]/, {guess => "_"}
+   # "Sammy has a red balloon".gsub /[aeiou]/, {"a" => "@", "o" => "0"}
+     sentence_array[letter_index] = ""
+     final_sentence[letter_index] = guess
+     end
+   puts "Correct! The sentence is now: #{final_sentence.join.upcase}"
   else
    puts "Sorry, that letter isn’t the right answer, please try again."
-  end 
+  end
 end
 
