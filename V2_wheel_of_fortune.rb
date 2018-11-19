@@ -9,6 +9,7 @@ while sentence_array.count("") < accurate_count.count
  puts "Guess a letter"
  guess = gets.downcase.chomp
   if sentence_array.include?(guess)
+   # letter_index = sentence_array.scan(guess)
    letter_index = sentence_array.find_index(guess)
    sentence_array[letter_index] = ""
    final_sentence[letter_index] = guess
