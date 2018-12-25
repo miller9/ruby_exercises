@@ -1,0 +1,25 @@
+puts "---"
+puts "Capitalize:"
+puts "ruby is fun!".capitalize
+puts "\nDowncase:"
+puts "JOHN_DOE@GMAIL.COM".downcase
+puts "\nSwapcase:"
+puts "RUBY is REALLY FUN".swapcase
+puts "\nINSERT:"
+puts "ruby students".insert(0,"Hello ")
+puts "\nREVERSE:"
+puts "ruby programming language".reverse
+puts "\nGSUB:"
+puts "ruby es divretido divretido".gsub('divretido','divertido')
+puts "ruby es divretido divretido".sub('divretido','divertido')
+puts "you are ruby students".gsub('a','@')
+puts "\nSTRIP:"
+puts "  ruby students   ".strip
+puts "\nINCLUDE:"
+puts "ruby students".include?("ruby")
+puts "\nSTART WITH ?:"
+puts "ruby students".start_with?("ru")
+
+
+
+puts "a".next
