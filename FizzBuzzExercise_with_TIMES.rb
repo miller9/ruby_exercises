@@ -3,18 +3,16 @@ puts """ This is a problem used by lots of employers as a warm up exercise durin
 """
 puts
 def fizzBuzzExercise
-    i = 1
-    100.times do |number|
-        if i % 3 == 0
-            if i % 5 == 0
-                puts i.to_s + " fizzbuzz --> multiples of both"
+    101.times do |number|
+        if number % 3 == 0
+            if number % 5 == 0
+                puts number.to_s + " fizzbuzz --> multiples of both"
             else
-                puts i.to_s + " fizz --> multiples of three"
+                puts number.to_s + " fizz --> multiples of three"
             end
-        elsif i % 5 == 0
-            puts i.to_s + " buzz --> multiples of five"
+        elsif number % 5 == 0
+            puts number.to_s + " buzz --> multiples of five"
         end
-        i += 1
     end
 end
 fizzBuzzExercise
