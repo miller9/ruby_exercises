@@ -154,10 +154,12 @@ def choose_msg()
 	when 2
 		puts "That's great!"
 		#new_message()
-		prepare_msg = prepare_string(new_message)
-		array_msg = convert_string(prepare_msg)
-		ready_array = remove_spaces(array_msg)
-		start(array_msg)
+			# prepare_msg = prepare_string(new_message)
+			# array_msg = convert_string(prepare_msg)
+			# ready_array = remove_spaces(array_msg)
+			# start(array_msg)
+
+		start( remove_spaces(convert_string(prepare_string(new_message))) )
 	when 3
 		puts "You'll play with ordered messages"
 	else
