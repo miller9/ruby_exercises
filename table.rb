@@ -1,14 +1,22 @@
 
 msg = "cada pasamanos"
 
-def choose_msg()
-	
+
+def new_message()
+	puts 
+	puts "You're about to create a new message to play, please write it:"
+	newest_message = gets.chomp.to_s
+	#puts "Thanks!"
 end
 
 
 	# animals = ["cat", "dog", "tiger"]
 	# animals.each_with_index { |animal, idx| 
 	# puts "We have a #{animal} with index #{idx}" }
+
+
+
+
 
 
 def prepare_string(string)
@@ -115,7 +123,9 @@ def start(arreglo)
 
 end
 
-start(array_msg)
+#start(array_msg)
+
+
 #puts "@temp_array es igual a 	: #{@temp_array}"
 #puts "@result_array es igual a 	: #{@result_array}"
 #puts "@new_a es igual a 		: #{@new_a}"
@@ -125,6 +135,37 @@ start(array_msg)
 
 
 
+
+
+def choose_msg()
+	puts
+	puts "Choose option to start:"
+	puts "1 = Random message"
+	puts "2 = I'll create my own message"
+	puts "3 = Ordered messages"
+	
+	option = gets.chomp.to_i
+
+	case option
+	when 0
+		puts "create category..."
+	when 1
+		puts "Perfect, we'll choose a random message for u!"
+	when 2
+		puts "That's great!"
+		#new_message()
+		prepare_msg = prepare_string(new_message)
+		array_msg = convert_string(prepare_msg)
+		ready_array = remove_spaces(array_msg)
+		start(array_msg)
+	when 3
+		puts "You'll play with ordered messages"
+	else
+		puts "Error: (#{option}) it's an invalid option.."
+	end
+end
+
+choose_msg()
 
 
 	puts ''
